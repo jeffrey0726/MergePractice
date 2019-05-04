@@ -11,7 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="js-class2-test/style.css">
+    <link rel="stylesheet" href="js-class3/style.css">
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
@@ -26,18 +26,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="RandomSelect.html">RandomSelect <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="RandomSelect.html">RandomSelect</a>
+            <li class="nav-item">
+              <a class="nav-link" href="club_course.html">Club Course</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">test</a>
+            <li class="nav-item">
+              <a class="nav-link" href="Mind_Quiz.html">Mind Quiz</a>
             <li class="nav-item">
               <a class="nav-link" href="RPG.html">RPG</a>
-            <li class="nav-item">
-              <a class="nav-link" href="class3.html">class3</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Youtube Player<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Disabled</a>
@@ -54,12 +56,11 @@
     <main role="main">
       <div class="container marketing">
         <hr class="featurette-divider">
-            <h1>你的愛情是什麼滋味?</h1>
-            <div>
-                <h2 id="question"></h2>
-                <div id="options"></div>
-            </div>
-            <input id="startButton" type="Button" value="開始作答">
+            <h1>Youtube心情點唱機</h1>
+            <h2></h2>
+            <div id="player"></div>
+            <br>
+            <input id="playButton" type="Button" value="play">
                 
         <hr class="featurette-divider">
 
@@ -84,7 +85,8 @@
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="assets/js/vendor/holder.min.js"></script>
-    <script src="js-class2-test/data.js"></script>
-    <script src="js-class2-test/main.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js-class3/playList.js"></script>
+    <script src="js-class3/main.js"></script>
   </body>
 </html>
