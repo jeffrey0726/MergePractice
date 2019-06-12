@@ -4,7 +4,7 @@ $(document).ready(function(){
         var numberOfListItem = $("#choices li").length;
         var randomChildNumber = Math.floor(Math.random()*numberOfListItem);
         
-        $("H1").text($("#choices li").eq(randomChildNumber).text());
+        $("h2").text($("#choices li").eq(randomChildNumber).text());
         var src = new Array(5);
         src[0] = "https://cw1.tw/CW/images/article/201702/article-58a50e8280597.jpg";
         src[1] = "https://cdn.walkerland.com.tw/images/upload/subject/b8efcae2b3156f893af49e40cb56f38ee2c6a345.jpg";

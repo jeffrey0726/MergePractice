@@ -14,9 +14,12 @@ $(document).ready(function(){
             //每次顯示選項前先將該區域清空(可以試者先不做這一步)
             $("#options").empty();
             //將一個一個選項內容，添加至選項區塊
-            for(var i=0; i < questions[0].answers.length; i++){
-                $("#options").append("<input name='options' type='radio' value="+i+">"+"<label>"+questions[0].answers[i][0]+"</label><br><br>");
-            }
+            $("#options").append("<input name='options' type='radio' id='radio-alpha' value="+0+">"+"<label  for='radio-alpha'>"+questions[0].answers[0][0]+"</label><br><br>");
+            $("#options").append("<input name='options' type='radio' id='radio-beta' value="+1+">"+"<label  for='radio-beta'>"+questions[0].answers[1][0]+"</label><br><br>");
+            $("#options").append("<input name='options' type='radio' id='radio-gamma' value="+2+">"+"<label  for='radio-gamma'>"+questions[0].answers[2][0]+"</label><br><br>");
+            /*for(var i=0; i < questions[0].answers.length; i++){
+                $("#options").append("<input name='options' type='radio' id'radio-alpha' value="+i+">"+"<label>"+questions[0].answers[i][0]+"</label><br><br>");
+            }*/
             //將按鈕上的文字換成next或下一題
             $("#startButton").sttr("value","Next");
         }
