@@ -11,7 +11,7 @@ function onYouTubeIframeAPIReady(){
         videoId:playList[currentPlay],
         playerVars:{
             "autoplay":0,//是否自動撥放
-            "controls":1,//是否顯示控制向
+            "controls":0,//是否顯示控制向
             "start":playTime[currentPlay][0],//開始播放秒數
             "end":playTime[currentPlay][1],//結束播放秒數
             "showinfo":0,//上方是否顯示影片標題

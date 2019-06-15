@@ -13,7 +13,7 @@ $(document).ready(function(){
             var td1 = $('<td>').text(i);
             var td2 = $('<td>').text((new Date(startDate.getTime()+(i-1)*7*dayUnit)).toLocaleDateString().slice(5));
             var td3;
-            if(topic[i-1] == "不上課")
+            if(topic[i-1] == "沒有演唱會")
                 td3 = $('<td id ="noClass">').text(topic[i-1]);
             else td3 = $('<td>').text(topic[i-1]);
             var tr = $('<tr>').append(td1,td2,td3);
