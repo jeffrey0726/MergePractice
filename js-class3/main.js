@@ -34,7 +34,6 @@ function onPlayerReady(event){
 }
 //當播放器播放狀態改變時
 function onPlayerStateChange(event){
-    console.log("playStateChange")
     //當播放結束時
     if(event.data==0 && (Math.floor(player.getCurrentTime())==playTime[currentPlay][1]))//播放狀態 0是結束
     {

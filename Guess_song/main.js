@@ -7,9 +7,24 @@ $(document).ready(function(){
     var select = null;
     var correct = 0;
     var music = null;
+    var first = true;
+    var record = new Array();
     function init(){
         select = Math.floor(Math.random()*3);
-        musicRand = Math.floor(Math.random()*20);
+        while(true){
+            var check = true;
+            musicRand = Math.floor(Math.random()*20);
+            for(var i = 0; i < record.length; i++){
+                if(record[i] == musicRand){
+                    check = false;
+                    break;
+                }
+            }
+            if(check == true)
+                break;
+        }
+        record.push(musicRand);
+        $("#music").attr("src",musicFile[musicRand]);
         if(select == 0){
             nameRand[0] = musicRand;
             while(true){
@@ -44,7 +59,7 @@ $(document).ready(function(){
                     break;
             }
             while(true){
-                nameRand[1] = Math.floor(Math.random()*40);
+                nameRand[1] = Math.floor(Math.random()*20);
                 if(nameRand[1] != nameRand[0] && nameRand[1] != nameRand[2])
                     break;
             }
@@ -54,14 +69,20 @@ $(document).ready(function(){
     $("#audio_btn").click(function(){
         if(musicRand != null){
             music = document.getElementById("music");
-            $("#music").attr("src",musicFile[musicRand]);
-            if(music.paused){
-                music.play();
-                $("#music_btn").attr("src","Guess_song/play.gif");
-            }else{
-                music.pause();
-                $("#music_btn").attr("src","Guess_song/pause.gif");
-            }   
+                if(music.paused){
+                    music.play();
+                    $("#music_btn").attr("src","Guess_song/play.gif");
+                }else{
+                    music.pause();
+                    $("#music_btn").attr("src","Guess_song/pause.gif");
+                }      
+        }
+    });
+    $("#audio_btn2").click(function(){
+        if(musicRand != null){
+            music = document.getElementById("music");
+            music.currentTime=0;
+            music.play();
         }
     });
     $("#startButton").click(function()
@@ -85,17 +106,35 @@ $(document).ready(function(){
         else{
             $.each($(":radio"),function(i,val){
                if(val.checked){
-                   //使用者所選取的項目是否已產生最終結果(A~D)
-                   if(currentQuiz == 10){
+                   if(currentQuiz == 9){
+                       if(nameRand[i] == musicRand)
+                           correct++;
                        //顯示最終結果的標題
-                       $("#question").text("恭喜你答對了"+correct+"題!");
+                       music = document.getElementById("music");
+                       if(correct == 10){
+                           $("#question").text("全部答對! 太厲害了!");
+                           $("#music").attr("src",shout[1]);
+                           music.play();
+                       }
+                       else if(correct > 5){
+                           $("#question").text("恭喜你答對"+correct+"題!再接再厲!");
+                           $("#music").attr("src",shout[1]);
+                           music.play();
+                       }
+                       else{
+                           $("#question").text("你答對了"+correct+"題!請繼續加油!");
+                           $("#music").attr("src",shout[0]);
+                           music.play();
+                       }
                        //將選項區清空
                        $("#options").empty();
                        //顯示最終結果的詳細內容
                        count = 0;
                        correct = 0;
                        currentQuiz=null;
-                       music.pause();
+                       record = null;
+                       record = new Array();
+                       musicRand = null;
                        //修改按鈕為重新開始
                        $("#startButton").attr("value","重新開始");
                    }
@@ -110,8 +149,8 @@ $(document).ready(function(){
                        $("#options").append("<input name='options' type='radio' id='radio-beta' value="+1+">"+"<label  for='radio-beta'>"+Name[nameRand[1]]+"</label><br><br>");
                        $("#options").append("<input name='options' type='radio' id='radio-gamma' value="+2+">"+"<label  for='radio-gamma'>"+Name[nameRand[2]]+"</label><br><br>");
                        count = 0;
+                       first = true;
                        currentQuiz++;
-                       music.pause();
                    }
                    //完成後即可跳離迴圈
                    return false;

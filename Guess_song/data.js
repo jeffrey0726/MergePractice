@@ -20,6 +20,10 @@ var Name = [
     "周杰倫-不愛我就拉倒",
     "盧廣仲-幾分之幾"
 ];
+var shout = [
+    "Guess_song/music/6072.wav",
+    "Guess_song/music/11228.wav"
+]
 var musicFile = [
     "Guess_song/music/李佳歡 Kar Fun - 不痛(官方歌詞版).mp3",
     "Guess_song/music/閻奕格 Janice Yan [ 也可以 Might as well ] Official Music Video (電影「追婚日記」插曲).mp3",

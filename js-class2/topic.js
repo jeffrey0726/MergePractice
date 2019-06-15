@@ -1,9 +1,11 @@
 var topic = [
-    "演唱會",
+    "周興哲演唱會",
     "沒有演唱會",
-    "演唱會",
+    "蕭秉治演唱會",
     "沒有演唱會",
-    "沒有演唱會"
+    "沒有演唱會",
+    "林俊傑演唱會",
+    "沒有演唱會",
 ]
 
 startDate = new Date();
@@ -14,10 +16,4 @@ function setMonthAndDate(startMonth, startDay)
     startDate.setMinutes(0);
     startDate.setSeconds(0);
 }
-/*function changeDate()
-{
-    var date = $("#start").val();
-    var item = date.split('-');
-    setMonthAndDate(item[1].replace(/^0/,''), item[2].replace(/^0/,''));   
-}*/
-setMonthAndDate(3, 30);
+setMonthAndDate(6, 15);
