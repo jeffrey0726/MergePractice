@@ -13,7 +13,7 @@ $(document).ready(function(){
         select = Math.floor(Math.random()*3);
         while(true){
             var check = true;
-            musicRand = Math.floor(Math.random()*20);
+            musicRand = Math.floor(Math.random()*30);
             for(var i = 0; i < record.length; i++){
                 if(record[i] == musicRand){
                     check = false;
@@ -28,12 +28,12 @@ $(document).ready(function(){
         if(select == 0){
             nameRand[0] = musicRand;
             while(true){
-                nameRand[1] = Math.floor(Math.random()*20);
+                nameRand[1] = Math.floor(Math.random()*30);
                 if(nameRand[1] != musicRand)
                     break;
             }
             while(true){
-                nameRand[2] = Math.floor(Math.random()*20);
+                nameRand[2] = Math.floor(Math.random()*30);
                 if(nameRand[2] != nameRand[1] && nameRand[2] != nameRand[0])
                     break;
             }
@@ -41,12 +41,12 @@ $(document).ready(function(){
         if(select == 1){
             nameRand[1] = musicRand;
             while(true){
-                nameRand[0] = Math.floor(Math.random()*20);
+                nameRand[0] = Math.floor(Math.random()*30);
                 if(nameRand[0] != musicRand)
                     break;
             }
             while(true){
-                nameRand[2] = Math.floor(Math.random()*20);
+                nameRand[2] = Math.floor(Math.random()*30);
                 if(nameRand[2] != nameRand[1] && nameRand[2] != nameRand[0])
                     break;
             }
@@ -54,12 +54,12 @@ $(document).ready(function(){
         if(select == 2){
             nameRand[2] = musicRand;
             while(true){
-                nameRand[0] = Math.floor(Math.random()*20);
+                nameRand[0] = Math.floor(Math.random()*30);
                 if(nameRand[0] != musicRand)
                     break;
             }
             while(true){
-                nameRand[1] = Math.floor(Math.random()*20);
+                nameRand[1] = Math.floor(Math.random()*30);
                 if(nameRand[1] != nameRand[0] && nameRand[1] != nameRand[2])
                     break;
             }

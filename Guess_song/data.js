@@ -18,7 +18,17 @@ var Name = [
     "李佳歡-崇拜",
     "王心凌-當你",
     "周杰倫-不愛我就拉倒",
-    "盧廣仲-幾分之幾"
+    "盧廣仲-幾分之幾",
+    "黃明志-飄向北方",
+    "阿信-隱形的紀念",
+    "周杰倫-告白氣球",
+    "周興哲-如果雨之後",
+    "五月天-如果我們不曾相遇",
+    "魏如昀-聽見下雨的聲音",
+    "徐佳瑩-真的傻",
+    "林俊傑-丹寧執著",
+    "陳綺貞-旅行的意義",
+    "梁文音-那女孩對我說"
 ];
 var shout = [
     "Guess_song/music/6072.wav",
@@ -44,5 +54,15 @@ var musicFile = [
     "Guess_song/music/李佳歡Kar Fun - 崇拜(官方歌詞版).mp3",
     "Guess_song/music/當你 王心凌 (歌詞lyrics ).mp3",
     "Guess_song/music/周杰倫 不愛我就拉倒 歌詞.mp3",
-    "Guess_song/music/盧廣仲 Crowd Lu 【幾分之幾 You Complete Me】 Official Music Video （花甲大人轉男孩電影主題曲）.mp3"
+    "Guess_song/music/盧廣仲 Crowd Lu 【幾分之幾 You Complete Me】 Official Music Video （花甲大人轉男孩電影主題曲）.mp3",
+    "Guess_song/music/黃明志Namewee ft. 王力宏 Leehom Wang【漂向北方 Stranger In The North 】@CROSSOVER ASIA 2017亞洲通車專輯.mp3",
+    "Guess_song/music/阿信 [ 隱形的紀念 The Hidden Memories ] Official Music Video.mp3",
+    "Guess_song/music/周杰倫 Jay Chou (特別演出 派偉俊)【告白氣球 Love Confession】Official MV.mp3",
+    "Guess_song/music/周興哲 如果雨之後 歌詞.mp3",
+    "Guess_song/music/Mayday五月天 [ 如果我們不曾相遇What If We Had Never Met ] Official Music Video.mp3",
+    "Guess_song/music/方文山電影同名主題曲【聽見下雨的聲音】完整MV 演唱魏如昀  詞方文山  曲周杰倫.mp3",
+    "Guess_song/music/徐佳瑩 真的傻 歌詞.mp3",
+    "Guess_song/music/林俊傑 JJ Lin - 丹寧執著 Own The Day (華納 Official HD 官方MV).mp3",
+    "Guess_song/music/陳綺貞 - 旅行的意義【歌詞】.mp3",
+    "Guess_song/music/梁文音 那女孩對我說 歌詞.mp3"
 ];
