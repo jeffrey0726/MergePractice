@@ -1,6 +1,16 @@
-body{
-    text-align: center;
-}
 li{
     text-align: left;
+}
+div.box1 {
+    text-align: center;
+    background-image: url(image/background.jpg);
+    background-size: cover;
+}
+h2,h3 {
+    color:white;
+    font-family:Microsoft JhengHei;
+}
+input {
+    color:white;
+    font-family:Microsoft JhengHei;
 }
